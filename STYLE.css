@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* HEADER */
+.app-header {
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  padding: 16px 24px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-emoji {
+  font-size: 40px;
+  background: #ffffff;
+  color: #1a365d;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.logo-text small {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* SCREENS */
+main {
+  padding: 20px;
+  padding-bottom: 90px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.box {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 8px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.box h3 {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.box p {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.box small {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #4a5568;
+}
+
+/* INDICATORS */
+.income-box { border-left: 4px solid #38a169; }
+.expense-box { border-left: 4px solid #e53e3e; }
+.total-box { border-left: 4px solid #805ad5; }
+.balance-box { border-left: 4px solid #3182ce; }
+
+/* FORM */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+}
+
+button {
+  padding: 10px;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.bottom-nav span {
+  display: block;
+  font-size: 12px;
+}
+/* HOME PAGE BACKGROUND IMAGE */
+#homeScreen {
+  background-image: url("images/money.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

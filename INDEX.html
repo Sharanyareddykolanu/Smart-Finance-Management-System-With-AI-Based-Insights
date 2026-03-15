@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- HEADER WITH EMOJI LOGO -->
+<header class="app-header">
+  <div class="logo">
+    <span class="logo-emoji">📊</span>
+    <div class="logo-text">
+      <h1>Finance Management System</h1>
+      <small>Smart Income • Expenses • Insights</small>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN SCREENS -->
+<main>
+
+  <!-- HOME SCREEN -->
+  <section class="screen active" id="homeScreen">
+    <div class="summary">
+      <div class="box income-box">
+        <h3>Income</h3>
+        <p>₹ <span id="income">0</span></p>
+        <small id="incomeCategories">(No records)</small>
+      </div>
+
+      <div class="box expense-box">
+        <h3>Expenses</h3>
+        <p>₹ <span id="expense">0</span></p>
+        <small id="expenseCategories">(No records)</small>
+      </div>
+
+      <div class="box total-box">
+        <h3>Total</h3>
+        <p>₹ <span id="total">0</span></p>
+      </div>
+
+      <div class="box balance-box">
+        <h3>Balance</h3>
+        <p>₹ <span id="balance">0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADD SCREEN -->
+  <section class="screen" id="addScreen">
+    <h2>Add Income / Expense</h2>
+    <form id="financeForm">
+      <input type="text" id="title" placeholder="Title">
+      <input type="number" id="amount" placeholder="Amount">
+
+      <select id="type">
+        <option value="">Select Type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <select id="category">
+        <option value="">Category</option>
+        <option>Salary</option>
+        <option>Freelance</option>
+        <option>Food</option>
+        <option>Rent</option>
+        <option>Transport</option>
+        <option>Bills</option>
+        <option>Shopping</option>
+      </select>
+
+      <button type="submit">Save Transaction</button>
+    </form>
+  </section>
+
+  <!-- GRAPH SCREEN -->
+  <section class="screen" id="graphScreen">
+    <h2>Analytics</h2>
+    <canvas id="donutChart"></canvas>
+  </section>
+
+  <!-- AI SCREEN -->
+  <section class="screen" id="aiScreen">
+    <h2>AI Insights</h2>
+    <p id="insight">Add income and expenses to get insights</p>
+  </section>
+
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button onclick="openScreen('homeScreen')">🏠<span>Home</span></button>
+  <button onclick="openScreen('addScreen')">➕<span>Add</span></button>
+  <button onclick="openScreen('graphScreen')">📊<span>Graph</span></button>
+  <button onclick="openScreen('aiScreen')">🤖<span>AI</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
